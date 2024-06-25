@@ -5,28 +5,32 @@
 package com.mycompany.atminterface;
 
 
-public class BankAccount{
+public class BankAccount {
     private double balance;
-    public BankAccount(double balance){
-        this.balance=balance;
+
+    public BankAccount(double balance) {
+        this.balance = balance;
     }
-    public boolean deposit(double amount){
-        if(amount>0){
-            balance+=amount;
+
+    public boolean deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
             return true;
-        }
-        else
+        } else {
             return false;
+        }
     }
-    public boolean withdraw(double amount){
-        if(amount>0&&amount<=balance){
-            balance-=amount;
+
+    public boolean withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
             return true;
-        }
-        else
+        } else {
             return false;
+        }
     }
-    public double checkBalance(){
+
+    public double checkBalance() {
         return balance;
     }
 }
